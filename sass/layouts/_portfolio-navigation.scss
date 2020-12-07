@@ -1,0 +1,39 @@
+.button.secondary {
+    border-radius: 4px;
+    padding: 6px 22px;
+    display: inline-block;
+    min-width: 73px;
+    border: transparent;
+    color: $title-text-color;
+    background-color: $additional-bg-color;
+    @include fonts(500, 15px, 1.6, 0.04em);
+    text-align: center;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    transition: color 250ms $timing-function,
+                background-color 250ms $timing-function; 
+}
+
+.button.secondary:hover,
+.button.secondary:focus {
+    color: $white-color;
+    background-color: $accent-color;
+}
+
+.portfolio {
+    padding-bottom: 94px;
+    padding-top: 94px;
+}
+
+.portfolio-nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex-container {
+    margin-right: auto;
+    margin-left: auto;
+    width: 611px;
+    padding-bottom: 16px;
+    margin-bottom: 34px;
+}

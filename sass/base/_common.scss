@@ -1,0 +1,82 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+::after,
+::before {
+    box-sizing: inherit;
+    outline: 2px solid red;
+}
+
+img {
+    display: block;
+}
+
+body {
+    font-family: $main-font;
+    background-color: $white-color;
+    color: $primary-text-color;
+    @include fonts(normal, 14px, 1.7, 0.03em);
+    
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    @include for-size(mobile) {
+        width: 480px;
+    }
+
+    @include for-size(tablet) {
+        width: 768px;
+    }
+
+    @include for-size(desktop) {
+        width: 1200px;
+    }
+}
+
+.visually-hidden {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0 !important;
+    border: 0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
+  }
+
+html body a:focus {
+    outline:none;
+}
+
+html body button:focus {
+    outline:none;
+}
+
+.button {
+    color: $title-text-color;
+    background-color: $additional-bg-color;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+hr {
+    border: none;
+    background-color: $additional-line-color;
+    height: 1px;
+    margin-top: 0;
+    margin-bottom: 0;
+}

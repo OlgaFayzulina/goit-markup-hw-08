@@ -1,0 +1,47 @@
+.section-clients {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.clients {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    justify-content: space-between;
+}
+
+.client-link {
+    display: inline-flex;
+    width: 170px;
+    height: 90px;
+    padding: 20px 63px;
+    border: 1px solid $icon-color;
+    border-radius: 4px;
+    align-items: center;
+    transition: border-color 250ms $timing-function;
+
+
+    &:hover,
+    &:focus {
+        border-color: $accent-color;
+    }
+}
+
+.clients .client-link:not(:last-child) {
+    margin-right: 30px;
+}
+
+.client-icon {
+    fill: $icon-color;
+    
+}
+
+.client-link .client-icon {
+    transition: fill 250ms $timing-function;
+}
+
+.client-link:hover .client-icon,
+.client-link:focus .client-icon {
+    fill: $accent-color;
+}

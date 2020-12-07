@@ -1,0 +1,41 @@
+.logo .accent-footer {
+    color: $white-color;
+}
+
+.address .link {
+    color: $white-color;
+    @include fonts(normal, 14px, 1.7, 0.03em);
+    font-style: normal;
+    text-decoration: none;
+}
+
+.address .contact {
+    color: $contact-color;
+    @include fonts(normal, 14px, 1.7, 0.03em);
+    font-style: normal;
+    text-decoration: none;
+}
+
+.address {
+    background-color: $secondary-bg-color;
+}
+
+.address-nav {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.address-nav .logo {
+    padding-top: 0;
+    padding-bottom: 20px;
+}
+
+.address .item {
+    margin-bottom: 9px;
+}
+
+.footer-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}

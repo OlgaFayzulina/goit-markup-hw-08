@@ -1,0 +1,15 @@
+.logo {
+    display: block;
+    padding-top: 24px;
+    padding-bottom: 25px;
+
+    color: $accent-color;
+    font-family: $logo-font;
+    font-size: 26px;
+    line-height: 1.2;
+    text-decoration: none;
+}
+
+.logo .accent {
+    color: $title-text-color;
+}
