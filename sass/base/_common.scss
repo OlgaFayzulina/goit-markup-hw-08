@@ -6,7 +6,7 @@ html {
 ::after,
 ::before {
     box-sizing: inherit;
-    outline: 2px solid red;
+    // outline: 2px solid red;
 }
 
 img {
@@ -17,6 +17,7 @@ body {
     font-family: $main-font;
     background-color: $white-color;
     color: $primary-text-color;
+    margin: 0;
     @include fonts(normal, 14px, 1.7, 0.03em);
     
 }

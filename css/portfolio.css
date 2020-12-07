@@ -6,7 +6,6 @@ html {
 ::after,
 ::before {
   box-sizing: inherit;
-  outline: 2px solid red;
 }
 
 img {
@@ -17,6 +16,7 @@ body {
   font-family: Roboto, sans-serif;
   background-color: #FFFFFF;
   color: #757575;
+  margin: 0;
   font-weight: normal;
   font-size: 14px;
   line-height: 1.7;

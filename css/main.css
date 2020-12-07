@@ -6,7 +6,6 @@ html {
 ::after,
 ::before {
   box-sizing: inherit;
-  outline: 2px solid red;
 }
 
 img {
@@ -17,6 +16,7 @@ body {
   font-family: Roboto, sans-serif;
   background-color: #FFFFFF;
   color: #757575;
+  margin: 0;
   font-weight: normal;
   font-size: 14px;
   line-height: 1.7;
@@ -164,10 +164,10 @@ hr {
   padding: 0;
   margin-right: 32px;
   margin-left: 32px;
-  width: 206px;
+  min-width: 206px;
   height: 44px;
   list-style: none;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .social-link {
@@ -676,14 +676,51 @@ textarea {
   }
 }
 
-.section-features {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
-.feature-list p {
+.features-text {
   margin-top: 0;
   margin-bottom: 0;
+}
+
+.section-features {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.features-item {
+  width: 100%;
+}
+
+.features-item::before {
+  display: block;
+  content: "";
+  height: 120px;
+  background-color: #F5F4FA;
+  border-radius: 4px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 30px;
+}
+
+.features-item:nth-child(1)::before {
+  background-image: url(/images/svg/icon-antenna.svg);
+}
+
+.features-item:nth-child(2)::before {
+  background-image: url(/images/svg/icon-clock.svg);
+}
+
+.features-item:nth-child(3)::before {
+  background-image: url(/images/svg/icon-diagram.svg);
+}
+
+.features-item:nth-child(4)::before {
+  background-image: url(/images/svg/icon-astronaut.svg);
+}
+
+@media (max-width: 767px) {
+  .features-item:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 
 .features-list {
@@ -758,12 +795,45 @@ textarea {
   color: #FFFFFF;
 }
 
+.section-team {
+  background-color: #F5F4FA;
+  padding-bottom: 60px;
+}
+
+.section-title {
+  padding-top: 60px;
+  margin-bottom: 30px;
+}
+
+@media (min-width: 1200px) {
+  .section-title {
+    margin-bottom: 50px;
+  }
+}
+
+.section-title {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  color: #212121;
+  text-align: center;
+}
+
+@media (min-width: 1200px) {
+  .section-title {
+    font-size: 36px;
+    line-height: 1.17;
+  }
+}
+
 .members .title {
   color: #212121;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
+  margin-bottom: 10px;
   text-align: center;
 }
 
@@ -773,12 +843,7 @@ textarea {
   line-height: 1.19;
   letter-spacing: 0.03em;
   text-align: center;
-}
-
-.section-team {
-  background-color: #F5F4FA;
-  padding-top: 94px;
-  padding-bottom: 94px;
+  color: #757575;
 }
 
 .members-item p {
@@ -787,7 +852,7 @@ textarea {
 }
 
 .members-item {
-  min-width: 270px;
+  width: 100%;
   text-align: center;
   background-color: #FFFFFF;
   margin-left: 0;
@@ -807,21 +872,14 @@ textarea {
   margin-bottom: 4px;
 }
 
-.members {
-  display: flex;
-  flex-wrap: wrap;
-}
-
 .members .item {
   display: inline-block;
-  width: 270px;
+  width: 100%;
+  max-width: 450px;
+  margin-bottom: 30px;
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.members .item:not(:last-child) {
-  margin-right: 30px;
 }
 
 .section-clients {
