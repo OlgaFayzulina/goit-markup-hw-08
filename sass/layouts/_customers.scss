@@ -1,30 +1,56 @@
 .section-clients {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    // padding-top: 94px;
+    // padding-bottom: 94px;
+    // padding-top: 60px;
+    padding-bottom: 60px;
 }
 
 .clients {
-    display: flex;
+    // display: flex;
+    // justify-content: space-between;
     padding: 0;
     margin: 0;
     list-style: none;
-    justify-content: space-between;
+
+    @include for-size(mobile-only) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between
+    }
 }
 
+.customer-item:nth-child(-n + 4) {
+    @include for-size(mobile-only) {
+      margin-bottom: 30px;
+    }
+  }
+
 .client-link {
-    display: inline-flex;
-    width: 170px;
+    display: flex;
+    width: 100%;
     height: 90px;
     padding: 20px 63px;
     border: 1px solid $icon-color;
     border-radius: 4px;
     align-items: center;
+    justify-content: center;
     transition: border-color 250ms $timing-function;
-
 
     &:hover,
     &:focus {
         border-color: $accent-color;
+    }   
+
+    @include for-size(mobile) {
+        width: 210px;
+    }
+
+    @include for-size(tablet) {
+        width: 226px;
+      }
+    
+    @include for-size(desktop) {
+        width: 170px;
     }
 }
 

@@ -18,6 +18,13 @@
 
 .address {
     background-color: $secondary-bg-color;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include for-size(mobile-only) {
+        text-align: center;
+    }
 }
 
 .address-nav {
@@ -35,7 +42,7 @@
 }
 
 .footer-flex {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    // display: flex;
+    // flex-wrap: wrap;
+    // justify-content: space-between;
 }

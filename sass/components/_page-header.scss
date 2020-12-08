@@ -1,5 +1,14 @@
 .header {
+    position: relative;
     display: flex;
     height: 80px;
-    align-items: center;   
+    align-items: center;
+    justify-content: space-between;
+
+    @include for-size(mobile-only) {
+        height: 60px;
+        
+    }
 }
+
+

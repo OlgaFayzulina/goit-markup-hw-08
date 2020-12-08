@@ -19,6 +19,10 @@
         @include fonts(500, 14px, 1.14, 0.02em);
         text-decoration: none;
     }
+
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
 }
 
 .contact-icon {

@@ -16,6 +16,7 @@
         <div class="container header">
             <nav class="site-nav-menu">
                 <a href="./index.html" class="logo" lang="en"> Web<span class="accent">Studio</span></a>
+
                 <ul class="site-nav list">
                     <li class="item"><a href="" class="link current">Студия</a></li>
                     <li class="item"><a href="./portfolio.html" class="link">Портфолио</a></li>
@@ -29,7 +30,7 @@
                         <svg class="contact-icon" width="21" height="17">
                             <use href="./images/symbol-defs1.svg#icon-envelope"></use>
                         </svg>
-                        info@devstudio.com
+                        <span>info@devstudio.com</span> 
                     </a>
                 </li>
                 <li class="item">
@@ -37,10 +38,52 @@
                         <svg class="contact-icon" width="16" height="20">
                             <use href="./images/symbol-defs1.svg#icon-vector"></use>
                         </svg>
-                        +38 096 111 11 11
+                        <span>+38 096 111 11 11</span> 
                     </a>
                 </li>
-            </ul>           
+            </ul>
+            <button 
+                type="button"
+                class="menu-button is-open" 
+                aria-expanded="false" 
+                aria-controls="mobile-menu"
+                data-menu-button
+            >
+                <svg 
+                    width="40px" 
+                    height="40px" 
+                    aria-label="Переключатель мобильного меню"
+                >
+                    <use class="icon-menu" href="./images/inline-sprite.svg#icon-close-menu"></use>
+                    <use class="icon-cross" href="./images/inline-sprite.svg#icon-menu"></use>
+                </svg>
+            </button> 
+            
+            <div class="mobile-menu" id="mobile-menu" data-menu>
+                <ul class="mobile-site-nav list">
+                    <li class="mobile-item"><a href="" class="link current">Студия</a></li>
+                    <li class="mobile-item"><a href="./portfolio.html" class="link">Портфолио</a></li>
+                    <li class="mobile-item"><a href="" class="link">Контакты</a></li>
+                </ul>
+                <ul class="mobile-contacts-list list">
+                    <li class="mobile-contacts-item">
+                        <a href="mailto:info@devstudio.com" lang="en" class="contact-link"> 
+                            <svg class="contact-icon" width="21" height="17">
+                                <use href="./images/symbol-defs1.svg#icon-envelope"></use>
+                            </svg>
+                            <span>info@devstudio.com</span> 
+                        </a>
+                    </li>
+                    <li class="mobile-contacts-item">
+                        <a href="tel:+380961111111" class="contact-link">
+                            <svg class="contact-icon" width="16" height="20">
+                                <use href="./images/symbol-defs1.svg#icon-vector"></use>
+                            </svg>
+                            <span>+38 096 111 11 11</span> 
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </header>
 
@@ -144,7 +187,12 @@
 
                 <ul class="members list">
                     <li class="item">
-                        <img src="./images/igor-demianenko-opt.jpg" alt="Игорь Демьяненко дизайнер" width="270"> 
+                        <picture>
+                            <source srcset="./images/desktop/logo_ihor.jpg 1x, ./images/desktop/logo_ihor@2x.jpg 2x" media="(min-width: 1200px)" />
+                            <source srcset="./images/tablet/logo_ihor.jpg 1x, ./images/tablet/logo_ihor@2x.jpg 2x" media="(min-width: 768px)" />
+                            <source srcset="./images/mobile/logo_ihor.jpg 1x, ./images/mobile/logo_ihor@2x.jpg 2x" media="(min-width: 480px)" />
+                            <img src="./images/igor-demianenko-opt.jpg" alt="Игорь Демьяненко дизайнер">
+                          </picture>
                     
                         <div class="members-item">
                             <h3 class="title">Игорь Демьяненко</h3>
@@ -184,7 +232,13 @@
                     </li>
 
                     <li class="item">
-                        <img src="./images/olga-repina-opt.jpg" alt="Ольга Репина разработчик" width="270">
+                        <picture>
+                            <source srcset="./images/desktop/logo_olya.jpg 1x, ./images/desktop/logo_olya@2x.jpg 2x" media="(min-width: 1200px)" />
+                            <source srcset="./images/tablet/logo_olya.jpg 1x, ./images/tablet/logo_olya@2x.jpg 2x" media="(min-width: 768px)" />
+                            <source srcset="./images/mobile/logo_olya.jpg 1x, ./images/mobile/logo_olya@2x.jpg 2x" media="(min-width: 480px)" />
+                            <img src="./images/olga-repina-opt.jpg" alt="Ольга Репина разработчик">
+                          </picture>
+                      
                         <div class="members-item">
                             <h3 class="title">Ольга Репина</h3>
                             <p lang="en" class="role">Frontend Developer</p>
@@ -223,7 +277,13 @@
                     </li>
 
                     <li class="item"> 
-                        <img src="./images/nikolai-tarasov-opt.jpg" alt="Николай Тарасов маркетинг" width="270">
+                        <picture>
+                            <source srcset="./images/desktop/logo_nikolay.jpg 1x, ./images/desktop/logo_nikolay@2x.jpg 2x" media="(min-width: 1200px)" />
+                            <source srcset="./images/tablet/logo_nikolay.jpg 1x, ./images/tablet/logo_nikolay@2x.jpg 2x" media="(min-width: 768px)" />
+                            <source srcset="./images/mobile/logo_nikolay.jpg 1x, ./images/mobile/logo_nikolay@2x.jpg 2x" media="(min-width: 480px)" />
+                            <img src="./images/nikolai-tarasov-opt.jpg" alt="Николай Тарасов маркетинг">
+                          </picture>
+                        
                         <div class="members-item">
                             <h3 class="title">Николай Тарасов</h3>
                             <p lang="en" class="role">Marketing</p>
@@ -262,7 +322,13 @@
                     </li>
 
                     <li class="item">
-                        <img src="./images/mikhail-yermakov-opt.jpg" alt="Михаил Ермаков дизайнер" width="270">
+                        <picture>
+                            <source srcset="./images/desktop/logo_mihaylo.jpg 1x, ./images/desktop/logo_mihaylo@2x.jpg 2x" media="(min-width: 1200px)" />
+                            <source srcset="./images/tablet/logo_mihaylo.jpg 1x, ./images/tablet/logo_mihaylo@2x.jpg 2x" media="(min-width: 768px)" />
+                            <source srcset="./images/mobile/logo_mihaylo.jpg 1x, ./images/mobile/logo_mihaylo@2x.jpg 2x" media="(max-width: 767px)" />
+                            <img src="./images/mikhail-yermakov-opt.jpg" alt="Михаил Ермаков дизайнер">
+                          </picture>
+                        
                         <div class="members-item">
                             <h3 class="title">Михаил Ермаков</h3>
                             <p lang="en" class="role">UI Designer</p>
@@ -309,42 +375,42 @@
                 <h2 class="section-title">Постоянные клиенты</h2>
 
                 <ul class="clients">
-                    <li>
+                    <li class="customer-item">
                         <a href="" target="_blank" class="client-link">
                             <svg class="client-icon" width="44" height="49">
                                 <use href="./images/symbol-defs1.svg#icon-client1"></use>
                             </svg>
                         </a>
                     </li>
-                    <li>
+                    <li class="customer-item">
                         <a href="" target="_blank" class="client-link">
                             <svg class="client-icon" width="40" height="52">
                                 <use href="./images/symbol-defs1.svg#icon-client2"></use>
                             </svg>
                         </a>
                     </li>
-                    <li>
+                    <li class="customer-item">
                         <a href="" target="_blank" class="client-link">
                             <svg class="client-icon" width="41" height="43">
                                 <use href="./images/symbol-defs1.svg#icon-client3"></use>
                             </svg>
                         </a>
                     </li>
-                    <li>
+                    <li class="customer-item">
                         <a href="" target="_blank" class="client-link">
                             <svg class="client-icon" width="80" height="42">
                                 <use href="./images/symbol-defs1.svg#icon-client4"></use>
                             </svg>
                         </a>
                     </li>
-                    <li>
+                    <li class="customer-item">
                         <a href="" target="_blank" class="client-link">
                             <svg class="client-icon" width="59" height="47">
                                 <use href="./images/symbol-defs1.svg#icon-client5"></use>
                             </svg>
                         </a>
                     </li>
-                    <li>
+                    <li class="customer-item">
                         <a href="" target="_blank" class="client-link">
                             <svg class="client-icon" width="88" height="45">
                                 <use href="./images/symbol-defs1.svg#icon-client6"></use>
@@ -485,6 +551,7 @@
      </div>
 
      <script src="./js/modal.js"></script>
+     <script src="./js/menu.js"></script>
   </body>
 </html> 
 
