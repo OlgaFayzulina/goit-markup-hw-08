@@ -1,19 +1,23 @@
 .contacts {
     display: flex;
     margin-left: auto;
-    align-items: center;
+    // align-items: center;
     list-style: none;
     justify-content: space-between;
 
     & .item + .item {
-        margin-left: 50px;
-    }
+         margin-left: 50px;
+        }
 
     & .contact-link {
         display: inline-flex;
         padding-top: 31px;
         padding-bottom: 31px;
         align-items: center;
+
+        @include for-size(tablet) {
+            padding: 0;
+        }
 
         color: $primary-text-color;
         @include fonts(500, 14px, 1.14, 0.02em);
@@ -26,7 +30,8 @@
 
         @include for-size(tablet) {
             flex-flow: column;
-        }
+            align-items: flex-start;
+        }  
     }
     
 
@@ -39,6 +44,8 @@
 
 .contact-link {
     transition: color 250ms $timing-function;
+
+     
 
     &:hover,
     &:focus {

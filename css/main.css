@@ -121,13 +121,8 @@ hr {
 .contacts {
   display: flex;
   margin-left: auto;
-  align-items: center;
   list-style: none;
   justify-content: space-between;
-}
-
-.contacts .item + .item {
-  margin-left: 50px;
 }
 
 .contacts .contact-link {
@@ -143,9 +138,22 @@ hr {
   text-decoration: none;
 }
 
-@media screen and (max-width: 767px) {
+@media (min-width: 768px) {
+  .contacts .contact-link {
+    padding: 0;
+  }
+}
+
+@media (max-width: 767px) {
   .contacts {
     display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .contacts {
+    flex-flow: column;
+    align-items: flex-start;
   }
 }
 
