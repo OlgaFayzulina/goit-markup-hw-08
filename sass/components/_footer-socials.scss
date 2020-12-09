@@ -7,12 +7,19 @@
     // margin-bottom: 100px;
     width: 206px;
     height: 80px;
+
+    @include for-size(tablet) {
+        text-align: center;
+        vertical-align: top;
+        margin-top: 65px;
+        float: right;
+        margin-right: 89px;
+      }
 }
 
 .social-title {
     color: $white-color;
-    font-weight: 700;
-    line-height: 1.17;
+    @include fonts(700, 14px, 1.17, 0.03em);
     text-transform: uppercase;
     margin-top: 0;
     margin-bottom: 20px;

@@ -6,21 +6,22 @@
 }
 
 .clients {
-    // display: flex;
-    // justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     padding: 0;
     margin: 0;
     list-style: none;
-
-    @include for-size(mobile-only) {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between
-    }
 }
 
 .customer-item:nth-child(-n + 4) {
     @include for-size(mobile-only) {
+      margin-bottom: 30px;
+    }
+  }
+
+  .customer-item:nth-child(-n + 3) {
+    @include for-size(tablet) {
       margin-bottom: 30px;
     }
   }

@@ -14,7 +14,7 @@
 
 .features-text {
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 30px;
   // display: inline-block;
   // margin-top: -14px;
   // margin-bottom: -14px;
@@ -23,26 +23,58 @@
 .section-features {
     // padding-top: 94px;
     // padding-bottom: 94px;
-    padding-top: 60px;
-    padding-bottom: 60px;
+    // padding-top: 60px;
+    padding-bottom: 30px;
+    margin-top: 60px;
 }
 
-// .features {
-//     // @include for-size(tablet) {
-//     //     display: flex;
-//     //     flex-wrap: wrap;
-//     //     justify-content: space-between;
-//     // }
-// }
-
-// .features-item {
-//     min-width: 270px;
-// }
-
-// :not(:last-child)
+ .features {
+    @include for-size(tablet) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+}
 
 .features-item {
   width: 100%;
+
+  @include for-size(mobile) {
+    width: 450px;
+  }
+  .features-item:not(:last-child) {
+    @include for-size(mobile-only) {
+      margin-bottom: 30px;
+    }
+  }
+
+  .features-item:nth-child(-n + 2) {
+    @include for-size(tablet-only) {
+      margin-bottom: 30px;
+    }
+  }
+ 
+    @include for-size(tablet) {
+      width: 354px;
+    }
+
+    @include for-size(desktop) {
+      width: 270px;
+      margin-bottom: 0;
+    }
+
+  .features-item:not(:last-child) {
+    @include for-size(desktop) {
+      margin-right: 30px;
+    }
+  }
+
+  .features-item:nth-child(2n + 1) {
+    @include for-size(tablet) {
+      margin-right: 30px;
+    }
+  }
+
 }
 
 .features-item::before {

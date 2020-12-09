@@ -20,10 +20,15 @@
         text-decoration: none;
     }
 
-    @media screen and (max-width: 767px) {
-        display: none;
+        @include for-size(mobile-only) {
+            display: none;
+        }
+
+        @include for-size(tablet) {
+            flex-flow: column;
+        }
     }
-}
+    
 
 .contact-icon {
     display: inline-flex;

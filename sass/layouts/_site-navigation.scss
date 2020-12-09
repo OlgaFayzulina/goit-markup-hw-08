@@ -56,6 +56,15 @@
     padding: 0;
     background-color: $white-color;
     border: none;
+
+    @include for-size(tablet) {
+        display: none;
+    }
+}
+
+.menu-button:hover,
+.menu-button:focus {
+    fill: $accent-color;
 }
 
 .menu-button .icon-cross {
@@ -82,6 +91,7 @@
     background-color: $white-color;
     text-align: center;
     padding-top: 60px;
+    padding-bottom: 60px;
     border-top: 1px solid $additional-line-color;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
 
@@ -101,7 +111,6 @@
     @include fonts(500, 18px, 1.17, 0.02em);
     text-decoration: none;
     transition: color 250ms $timing-function;
-
 }
 
 .mobile-site-nav .link:hover,
@@ -130,8 +139,7 @@
 }
 
 .mobile-contacts-list {
-    padding-top: 60px;
-    
+    padding-top: 60px;   
 }
 
 .mobile-contacts-list .contact-link {
@@ -140,6 +148,11 @@
     color: $primary-text-color;
     @include fonts(500, 18px, 1.17, 0.02em);
     text-decoration: none;
+}
+
+.mobile-contacts-list .contact-icon {
+    display: inline-block;
+    margin-right: 5px;
 }
 
 .mobile-contacts-item:not(:last-child) {
