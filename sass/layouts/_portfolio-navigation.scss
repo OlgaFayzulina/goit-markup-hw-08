@@ -37,3 +37,13 @@
     padding-bottom: 16px;
     margin-bottom: 34px;
 }
+
+.portfolio-nav .item:not(:last-child) {
+    margin-right: 8px;
+  }
+  
+  .portfolio-nav .item:nth-child(-n + 3) {
+    @include for-size(mobile-only) {
+      margin-bottom: 15px;
+    }
+  }
