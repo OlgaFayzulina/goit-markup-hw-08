@@ -493,13 +493,14 @@ hr {
   .modal {
     min-width: 528px;
     min-height: 581px;
-    top: 50%;
+    top: 80%;
     left: 50%;
   }
 }
 
 .modal-button {
   position: absolute;
+  left: 89%;
   right: 0;
   margin-right: 8px;
   margin-top: 8px;
@@ -517,9 +518,9 @@ hr {
   fill: #2196F3;
 }
 
-@media (min-width: 480px) {
+@media (min-width: 768px) {
   .modal-button {
-    left: 89%;
+    left: 92%;
   }
 }
 
@@ -553,22 +554,10 @@ textarea {
 }
 
 .form {
-  width: 448px;
+  width: 370px;
   margin-left: auto;
   margin-right: auto;
   padding: 0;
-}
-
-@media (min-width: 480px) {
-  .form {
-    width: 370px;
-  }
-}
-
-@media (min-width: 768px) {
-  .form {
-    width: 370px;
-  }
 }
 
 @media (min-width: 1200px) {
@@ -651,13 +640,8 @@ textarea {
   justify-content: center;
   height: 24px;
   padding: 0;
-}
-
-@media (min-width: 480px) {
-  .form-checkbox {
-    width: 370px;
-    height: 15px;
-  }
+  width: 370px;
+  height: 15px;
 }
 
 @media (min-width: 1200px) {
