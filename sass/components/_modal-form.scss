@@ -7,6 +7,18 @@ textarea{
     margin-left: auto;
     margin-right: auto;
     padding: 0;
+
+    @include for-size(mobile) {
+        width: 370px;
+    }
+
+    @include for-size(tablet) {
+        width: 370px;
+    }
+
+    @include for-size(desktop) {
+        width: 448px;
+    }
 }
 
 .form-field {
@@ -79,6 +91,16 @@ textarea{
     justify-content: center;
     height: 24px;
     padding: 0;
+
+    @include for-size(mobile) {
+        width: 370px;
+        height: 15px;
+    }
+
+    @include for-size(desktop) {
+        width: 425px;
+        height: 24px;
+    }
 }
 
 .checkbox {
@@ -113,17 +135,27 @@ textarea{
 }
 
 .form-checkbox label{
-    display: inline-flex;
+    // display: inline-flex;
     margin-left: 7px;
-    @include fonts(normal, 14px, 1.7, 0.03em);
+    @include fonts(normal, 11px, 1.17, 0.03em);
+
+    @include for-size(desktop) {
+        // display: inline-flex;
+        @include fonts(normal, 13px, 1.7, 0.03em);
+    }
 }
 
 .form-checkbox a {
     display: inline-block;
     margin-left: 4px;
     color: $accent-color;
-    @include fonts(normal, 14px, 1.7, 0.03em);
+    @include fonts(normal, 11px, 1.17, 0.03em);
     text-decoration: underline;
+
+    @include for-size(desktop) {
+        @include fonts(normal, 13px, 1.7, 0.03em);
+        display: inline;
+    }
 }
 
 .form-button {

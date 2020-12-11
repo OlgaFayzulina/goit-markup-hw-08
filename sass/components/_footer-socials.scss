@@ -1,10 +1,6 @@
 .socials-container {
     display: inline-block;
     padding: 0;
-    
-    // margin-left: 70px;
-    // margin-top: 70px;
-    // margin-bottom: 100px;
     width: 206px;
     height: 80px;
 
@@ -52,8 +48,6 @@
     margin: 0;
     list-style: none;
     
-
-
     & .social1-link:hover,
     & .social1-link:focus {
         background-color: $accent-color;

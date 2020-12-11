@@ -23,6 +23,10 @@ body {
   letter-spacing: 0.03em;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 .list {
   list-style: none;
   padding: 0;
@@ -356,7 +360,8 @@ hr {
     width: 570px;
     height: 86px;
     display: flex;
-    justify-content: space-between;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
     margin-left: 93px;
     margin-top: 70px;
     margin-bottom: 100px;
@@ -413,8 +418,7 @@ hr {
 
 .footer-button {
   display: inline-flex;
-  margin: 0;
-  margin-bottom: auto;
+  margin-top: auto;
   padding: 10px 28px;
   width: 200px;
   align-items: center;
@@ -445,10 +449,18 @@ hr {
   left: 0;
   width: 100%;
   height: 100%;
+  padding: 93px 15px;
   background-color: rgba(0, 0, 0, 0.2);
+  z-index: 55;
   opacity: 1;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  padding: 8px;
+  overflow-y: scroll;
+}
+
+@media (min-width: 1200px) {
+  .backdrop {
+    padding: 8px;
+  }
 }
 
 .backdrop.is-hidden {
@@ -461,14 +473,29 @@ hr {
 }
 
 .modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(1);
-  min-width: 528px;
-  min-height: 581px;
+  min-width: 450px;
+  min-height: 609px;
   background-color: #FFFFFF;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (min-width: 768px) {
+  .modal {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@media (min-width: 1200px) {
+  .modal {
+    min-width: 528px;
+    min-height: 581px;
+    top: 50%;
+    left: 50%;
+  }
 }
 
 .modal-button {
@@ -490,6 +517,12 @@ hr {
   fill: #2196F3;
 }
 
+@media (min-width: 480px) {
+  .modal-button {
+    left: 89%;
+  }
+}
+
 .close-icon {
   display: inline-flex;
   margin-top: 4px;
@@ -508,6 +541,13 @@ hr {
   letter-spacing: 0.03em;
 }
 
+@media (min-width: 480px) {
+  .modal-title {
+    padding-top: 40px;
+    margin-top: 0;
+  }
+}
+
 textarea {
   resize: none;
 }
@@ -517,6 +557,24 @@ textarea {
   margin-left: auto;
   margin-right: auto;
   padding: 0;
+}
+
+@media (min-width: 480px) {
+  .form {
+    width: 370px;
+  }
+}
+
+@media (min-width: 768px) {
+  .form {
+    width: 370px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .form {
+    width: 448px;
+  }
 }
 
 .form-field {
@@ -595,6 +653,20 @@ textarea {
   padding: 0;
 }
 
+@media (min-width: 480px) {
+  .form-checkbox {
+    width: 370px;
+    height: 15px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .form-checkbox {
+    width: 425px;
+    height: 24px;
+  }
+}
+
 .checkbox {
   position: absolute;
   -webkit-appearance: none;
@@ -624,12 +696,20 @@ textarea {
 }
 
 .form-checkbox label {
-  display: inline-flex;
   margin-left: 7px;
   font-weight: normal;
-  font-size: 14px;
-  line-height: 1.7;
+  font-size: 11px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
+}
+
+@media (min-width: 1200px) {
+  .form-checkbox label {
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+  }
 }
 
 .form-checkbox a {
@@ -637,10 +717,20 @@ textarea {
   margin-left: 4px;
   color: #2196F3;
   font-weight: normal;
-  font-size: 14px;
-  line-height: 1.7;
+  font-size: 11px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   text-decoration: underline;
+}
+
+@media (min-width: 1200px) {
+  .form-checkbox a {
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+    display: inline;
+  }
 }
 
 .form-button {
@@ -758,6 +848,7 @@ textarea {
   left: 0;
   width: 100%;
   height: 453px;
+  z-index: 1;
   background-color: #FFFFFF;
   text-align: center;
   padding-top: 60px;
@@ -864,11 +955,12 @@ textarea {
 }
 
 .hero {
-  width: 100%;
+  max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
   background-color: #2F303A;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/img-hero-opt.jpg");
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   text-align: center;

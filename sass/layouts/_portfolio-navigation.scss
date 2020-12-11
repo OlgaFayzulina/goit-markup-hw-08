@@ -2,7 +2,7 @@
     border-radius: 4px;
     padding: 6px 22px;
     display: inline-block;
-    min-width: 73px;
+    width: 100%;
     border: transparent;
     color: $title-text-color;
     background-color: $additional-bg-color;
@@ -23,27 +23,54 @@
 .portfolio {
     padding-bottom: 94px;
     padding-top: 94px;
+
+    @include for-size(mobile) {
+      padding-top: 60px;
+      padding-bottom: 30px;
+      margin: 0;
+    }
+
+    @include for-size(desktop) {
+      margin-right: auto;
+      margin-left: auto;
+    }
 }
 
 .portfolio-nav {
     display: flex;
     justify-content: space-between;
+
+    @include for-size(mobile) {
+      flex-wrap: wrap;
+      justify-content: left;
+    }
+
+    @include for-size(tablet) {
+      justify-content: center;
+    }
 }
 
 .flex-container {
     margin-right: auto;
     margin-left: auto;
-    width: 611px;
+    width: 100%;
     padding-bottom: 16px;
     margin-bottom: 34px;
+
+    @include for-size(tablet) {
+      min-width: 611px;
+      padding-bottom: 14px;
+      margin-bottom: 0;
+    }
+
 }
 
 .portfolio-nav .item:not(:last-child) {
-    margin-right: 8px;
+  margin-right: 8px;
   }
   
-  .portfolio-nav .item:nth-child(-n + 3) {
-    @include for-size(mobile-only) {
-      margin-bottom: 15px;
-    }
+.portfolio-nav .item:nth-child(-n + 3) {
+  @include for-size(mobile) {
+  margin-bottom: 15px;
   }
+}

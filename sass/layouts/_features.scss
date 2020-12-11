@@ -22,9 +22,6 @@
 }
 
 .section-features {
-    // padding-top: 94px;
-    // padding-bottom: 94px;
-    // padding-top: 60px;
     margin-top: 60px;
 
     @include for-size(desktop) {
@@ -116,8 +113,6 @@
 }
 
 .features-list {
-    // display: flex;
-    // justify-content: space-between;
     margin-bottom: 30px; 
     padding: 0;
     margin-top: 0;

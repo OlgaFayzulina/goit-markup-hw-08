@@ -26,7 +26,6 @@
     display: flex;
     flex-wrap: wrap; 
 
-
     & .link {
         display: inline-block;
         text-decoration: none;
@@ -41,17 +40,45 @@
 
 .work-nav .item {
     display: inline-block;
-    width: 370px;
+    width: 100%;
     text-align: left;
-    margin-right: 30px;
     margin-bottom: 30px;
     border: 1px solid $border-line-color;
     background-color: $white-color;
+
+    @include for-size(tablet) {
+        flex-basis: calc((100% - 30px) / 2);
+        min-width: 354px;
+    }
+
+    @include for-size(desktop) {
+        flex-basis: calc((100% - 60px) / 3); 
+        min-width: 370px;
+    }
+    
+}
+
+.work-nav .item:not(:nth-child(2n)) {
+    @include for-size(tablet) {
+        margin-right: 30px;
+    }
+}
+
+.work-nav .item:not(:nth-child(3n)) {
+    @include for-size(desktop) {
+        margin-right: 30px;
+    }
+}
+
+.work-nav .item:nth-child(3n) {
+    @include for-size(desktop) {
+    margin-right: 0;
+    }   
 }
 
 .product-item img {
   display: block;
-  width: 100%;
+  max-width: 450px;
 }
 
 .product-thumb {
@@ -72,7 +99,7 @@
 
 .work-nav .link:hover .product-overlay,
 .work-nav .link:focus .product-overlay {
-    transform: translateY(0) 
+    transform: translateY(0); 
 }
 
 .product-label {
@@ -95,12 +122,4 @@
 .work-nav .link:hover .product-label,
 .work-nav .link:focus .product-label {
     opacity: 0.7;
-}
-
-.work-nav .item:nth-child(3n) {
-    margin-right: 0;
-}
-
-.work-nav .item:nth-child(- n + 3) {
-    margin-bottom: 0;
 }
