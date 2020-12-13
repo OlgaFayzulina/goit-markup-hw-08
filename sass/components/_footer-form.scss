@@ -9,15 +9,11 @@
 
     @include for-size(desktop) {
         width: 570px;
-        height: 86px;
         display: flex;
-        flex-wrap: nowrap;
-        justify-content: flex-end;
         
         margin-left: 93px;
         margin-top: 70px;
-        margin-bottom: 100px;
-        text-align: left;
+        margin-bottom: 60px;
     }
 }
 
@@ -42,6 +38,10 @@
     height: 50px;
     @include fonts(normal, 16px, 1.25, 0.03em);
     color: rgba(255, 255, 255, 0.6);
+
+    @include for-size(desktop) {
+        margin-bottom: unset;
+    }
 }
 
 .footer-field {

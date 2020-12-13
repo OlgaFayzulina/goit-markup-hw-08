@@ -308,14 +308,10 @@ hr {
 @media (min-width: 1200px) {
   .footer-form {
     width: 570px;
-    height: 86px;
     display: flex;
-    flex-wrap: nowrap;
-    justify-content: flex-end;
     margin-left: 93px;
     margin-top: 70px;
-    margin-bottom: 100px;
-    text-align: left;
+    margin-bottom: 60px;
   }
 }
 
@@ -343,6 +339,12 @@ hr {
   line-height: 1.25;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+}
+
+@media (min-width: 1200px) {
+  .footer-form input {
+    margin-bottom: unset;
+  }
 }
 
 .footer-field {
@@ -607,7 +609,17 @@ hr {
   .portfolio {
     padding-top: 60px;
     padding-bottom: 30px;
-    margin: 0;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .portfolio {
+    padding-top: 60px;
+    padding-bottom: 30px;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 

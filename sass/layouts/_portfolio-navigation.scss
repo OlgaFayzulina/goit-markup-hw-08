@@ -27,7 +27,15 @@
     @include for-size(mobile) {
       padding-top: 60px;
       padding-bottom: 30px;
-      margin: 0;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    @include for-size(tablet) {
+      padding-top: 60px;
+      padding-bottom: 30px;
+      margin-right: auto;
+      margin-left: auto;
     }
 
     @include for-size(desktop) {
