@@ -1192,7 +1192,6 @@ textarea {
 .section-team {
   background-color: #F5F4FA;
   padding-bottom: 60px;
-  width: 100%;
 }
 
 .section-title {
@@ -1247,7 +1246,6 @@ textarea {
 }
 
 .members-item {
-  width: 100%;
   text-align: center;
   background-color: #FFFFFF;
   margin-left: 0;
@@ -1286,6 +1284,13 @@ textarea {
   border-bottom-right-radius: 4px;
   margin: 15px;
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  .members .item {
+    min-width: 450px;
+  }
 }
 
 .section-clients {
