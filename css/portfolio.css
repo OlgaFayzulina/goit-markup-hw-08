@@ -838,7 +838,6 @@ hr {
 
 @media (max-width: 767px) {
   .address {
-    min-width: 480px;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
@@ -848,12 +847,6 @@ hr {
 .address-nav {
   padding-top: 60px;
   padding-bottom: 60px;
-}
-
-@media (max-width: 767px) {
-  .address-nav {
-    min-width: 480px;
-  }
 }
 
 @media (min-width: 768px) {
@@ -885,7 +878,6 @@ hr {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 100%;
   }
 }
 

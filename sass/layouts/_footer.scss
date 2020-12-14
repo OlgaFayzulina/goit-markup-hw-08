@@ -20,7 +20,7 @@
     background-color: $secondary-bg-color;
 
     @include for-size(mobile-only) {
-        min-width: 480px;
+        // min-width: 480px;
         text-align: center;
         margin-left: auto;
         margin-right: auto;
@@ -30,10 +30,6 @@
 .address-nav {
     padding-top: 60px;
     padding-bottom: 60px;
-
-    @include for-size(mobile-only) {
-        min-width: 480px;
-      }
 
     @include for-size(tablet) {
     display: inline-block;
@@ -62,7 +58,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 100%;
+    // width: 100%;
     }
 
     @include for-size(mobile-only) {

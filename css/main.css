@@ -1334,7 +1334,6 @@ textarea {
   display: flex;
   width: 100%;
   height: 90px;
-  padding: 20px 63px;
   border: 1px solid #AFB1B8;
   border-radius: 4px;
   align-items: center;
@@ -1411,7 +1410,6 @@ textarea {
 
 @media (max-width: 767px) {
   .address {
-    min-width: 480px;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
@@ -1421,12 +1419,6 @@ textarea {
 .address-nav {
   padding-top: 60px;
   padding-bottom: 60px;
-}
-
-@media (max-width: 767px) {
-  .address-nav {
-    min-width: 480px;
-  }
 }
 
 @media (min-width: 768px) {
@@ -1458,7 +1450,6 @@ textarea {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 100%;
   }
 }
 
