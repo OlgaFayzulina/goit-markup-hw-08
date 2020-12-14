@@ -7,7 +7,7 @@
 
     @include for-size(mobile-only) {
         height: 60px;
-        
+        min-width: 480px; 
     }
 }
 

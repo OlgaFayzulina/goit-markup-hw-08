@@ -23,6 +23,12 @@ body {
   letter-spacing: 0.03em;
 }
 
+@media (max-width: 767px) {
+  body {
+    min-width: 480px;
+  }
+}
+
 body.modal-open {
   overflow: hidden;
 }
@@ -118,6 +124,7 @@ hr {
 @media (max-width: 767px) {
   .header {
     height: 60px;
+    min-width: 480px;
   }
 }
 
@@ -637,6 +644,7 @@ hr {
 
 @media (min-width: 480px) {
   .portfolio-nav {
+    min-width: 480px;
     flex-wrap: wrap;
     justify-content: left;
   }

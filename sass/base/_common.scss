@@ -19,6 +19,10 @@ body {
     color: $primary-text-color;
     margin: 0;
     @include fonts(normal, 14px, 1.7, 0.03em);
+
+    @include for-size(mobile-only) {
+         min-width: 480px;
+     }
     
 }
 

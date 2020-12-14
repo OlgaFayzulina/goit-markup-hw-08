@@ -49,6 +49,7 @@
     justify-content: space-between;
 
     @include for-size(mobile) {
+      min-width: 480px;
       flex-wrap: wrap;
       justify-content: left;
     }
