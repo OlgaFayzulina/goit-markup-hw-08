@@ -40,8 +40,8 @@
 .features-item {
   width: 100%;
 
-  @include for-size(mobile) {
-    width: 450px;
+  @include for-size(mobile-only) {
+    min-width: 450px;
   }
   .features-item:not(:last-child) {
     @include for-size(mobile-only) {

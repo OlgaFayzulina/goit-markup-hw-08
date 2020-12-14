@@ -36,7 +36,6 @@ body.modal-open {
 .container {
   margin-right: auto;
   margin-left: auto;
-  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -1046,9 +1045,9 @@ textarea {
   width: 100%;
 }
 
-@media (min-width: 480px) {
+@media (max-width: 767px) {
   .features-item {
-    width: 450px;
+    min-width: 450px;
   }
 }
 
@@ -1193,6 +1192,7 @@ textarea {
 .section-team {
   background-color: #F5F4FA;
   padding-bottom: 60px;
+  width: 100%;
 }
 
 .section-title {
