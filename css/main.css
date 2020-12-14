@@ -611,11 +611,13 @@ textarea {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-field input:focus {
+.form-field input:focus,
+input:hover {
   outline: none;
   border: 1px solid #2196F3;
 }
 
+.form-field:hover,
 .form-field:focus-within > .form-icon {
   fill: #2196F3;
 }
@@ -639,7 +641,8 @@ textarea {
   letter-spacing: 0.01em;
 }
 
-.form-field textarea:focus {
+.form-field textarea:focus,
+textarea:hover {
   outline: none;
   border: 1px solid #2196F3;
 }

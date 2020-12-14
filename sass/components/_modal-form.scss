@@ -48,11 +48,13 @@ textarea{
     transition: fill 250ms $timing-function;
 }
 
-.form-field input:focus {
+.form-field input:focus,
+            input:hover {
     outline: none;
     border: 1px solid #2196F3;
 }
 
+.form-field:hover,
 .form-field:focus-within > .form-icon{
     fill: #2196F3;
 }
@@ -73,7 +75,8 @@ textarea{
     @include fonts(normal, 14px, 1.14, 0.01em);
 }
 
-.form-field textarea:focus {
+.form-field textarea:focus,
+            textarea:hover {
     outline: none;
     border: 1px solid #2196F3;
 }
