@@ -43,8 +43,8 @@
         border-color: $accent-color;
     }   
 
-    @include for-size(mobile) {
-        width: 210px;
+    @include for-size(mobile-only) {
+        min-width: 210px;
     }
 
     @include for-size(tablet) {

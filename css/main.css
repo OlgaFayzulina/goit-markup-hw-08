@@ -1346,9 +1346,9 @@ textarea {
   border-color: #2196F3;
 }
 
-@media (min-width: 480px) {
+@media (max-width: 767px) {
   .client-link {
-    width: 210px;
+    min-width: 210px;
   }
 }
 
