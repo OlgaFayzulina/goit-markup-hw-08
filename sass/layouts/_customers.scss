@@ -1,5 +1,9 @@
 .section-clients {
     padding-bottom: 60px;
+    
+    @include for-size(mobile-only) {
+        min-width: 480px;
+      }
 }
 
 .clients {

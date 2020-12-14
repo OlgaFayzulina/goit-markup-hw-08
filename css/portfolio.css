@@ -838,7 +838,7 @@ hr {
 @media (max-width: 767px) {
   .address {
     text-align: center;
-    width: 100%;
+    min-width: 232px;
     margin-left: auto;
     margin-right: auto;
   }
