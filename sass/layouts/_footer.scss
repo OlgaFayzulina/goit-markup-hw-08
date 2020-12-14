@@ -20,8 +20,8 @@
     background-color: $secondary-bg-color;
 
     @include for-size(mobile-only) {
+        min-width: 480px;
         text-align: center;
-        min-width: 232px;
         margin-left: auto;
         margin-right: auto;
     }
@@ -30,6 +30,10 @@
 .address-nav {
     padding-top: 60px;
     padding-bottom: 60px;
+
+    @include for-size(mobile-only) {
+        min-width: 480px;
+      }
 
     @include for-size(tablet) {
     display: inline-block;
@@ -50,6 +54,7 @@
 
 .address .item {
     margin-bottom: 9px;
+
 }
 
 .footer-flex {

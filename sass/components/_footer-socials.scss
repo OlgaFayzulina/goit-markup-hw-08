@@ -3,6 +3,7 @@
     padding: 0;
     width: 206px;
     height: 80px;
+    margin-bottom: 60px;
 
     @include for-size(mobile) {
         margin-bottom: 60px;
