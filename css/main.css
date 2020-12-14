@@ -1095,15 +1095,15 @@ textarea {
 }
 
 .features-item:nth-child(1)::before {
-  background-image: url(/images/svg/icon-antenna.svg);
+  background-image: url(../images/svg/icon-antenna.svg);
 }
 
 .features-item:nth-child(2)::before {
-  background-image: url(/images/svg/icon-clock.svg);
+  background-image: url(../images/svg/icon-clock.svg);
 }
 
 .features-item:nth-child(3)::before {
-  background-image: url(/images/svg/icon-diagram.svg);
+  background-image: url(../images/svg/icon-diagram.svg);
 }
 
 .features-item:nth-child(4)::before {
