@@ -670,6 +670,12 @@ hr {
   }
 }
 
+@media (min-width: 1200px) {
+  .flex-container {
+    margin-bottom: 34px;
+  }
+}
+
 .portfolio-nav .item:not(:last-child) {
   margin-right: 8px;
 }

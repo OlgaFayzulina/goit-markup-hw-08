@@ -72,6 +72,10 @@
       padding-bottom: 14px;
       margin-bottom: 0;
     }
+
+    @include for-size(desktop) {
+      margin-bottom: 34px;
+    }
 }
 
 .portfolio-nav .item:not(:last-child) {
