@@ -44,9 +44,9 @@
     }
 
 
-  @include for-size(mobile-only) {
-    width: 480px;
-}
+//   @include for-size(mobile-only) {
+//     width: 480px;
+// }
 
   @include for-size(tablet-only) {
     width: 768px;
